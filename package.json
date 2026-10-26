@@ -1,0 +1,10 @@
+{
+  "name": "stack-inventory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bestand, Zählung und Listen im Browser",
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node --check dist/app.js && node --check dist/counting.js && node --check dist/history.js"
+  }
+}

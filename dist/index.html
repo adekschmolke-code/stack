@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stack</title><link rel="icon" href="logo.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="header-main"><a class="brand" href="#bestand" aria-label="Stack – Bestand"><img src="logo.svg" width="38" height="38" alt=""><span class="brand-word">Stack<span>.</span></span></a><nav aria-label="Hauptnavigation"><a href="#bestand" data-page="bestand">Bestand</a><a href="#zaehlung" data-page="zaehlung">Zählung</a><a href="#listen" data-page="listen">Listen</a></nav><div class="header-actions"><div id="changeNotice" role="status"></div><button id="openHistory" type="button" class="icon-button" aria-label="Verlauf öffnen" title="Verlauf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2 7M3 4v7h7M12 7v5l3 2"/></svg></button></div></div><div id="headerNotifications" aria-label="Benachrichtigungen"><p id="storageStatus" role="status"></p><p id="articleStatus" role="status"></p><p id="saveCountStatus" role="status"></p><p id="countStatus" role="status"></p></div></header>
+<main><p class="eyebrow">STACK</p><h1 id="pageTitle">Bestand</h1><section id="categoryControls" class="category-controls" aria-label="Kategorien"><label for="categorySelect">Kategorie</label><div class="category-row"><select id="categorySelect"><option value="">Kategorie auswählen</option></select></div></section><section id="inventory" class="workspace" aria-label="Artikel"><div class="article-toolbar"><span>Artikel</span></div><div id="articleList"></div><p class="gesture-hint">Antippen zum Ändern · Wischen und Löschen bestätigen · Halten zum Verschieben</p></section><section id="countWorkspace" class="workspace" hidden><div class="article-toolbar"><span>Artikel zählen</span><button id="saveCounting" type="button" class="primary">Speichern</button></div><div id="counting" class="counting-grid" aria-label="Artikel zählen" hidden></div><p class="gesture-hint">Halten zum Verschieben · Eigene Reihenfolge für die Zählung</p></section><section id="savedLists" class="workspace" aria-label="Gespeicherte Listen" hidden></section></main>
+<dialog id="categoryDialog"><form id="categoryForm"><h2>Kategorie hinzufügen</h2><label for="categoryName">Name der Kategorie</label><input id="categoryName" maxlength="70" required autocomplete="off"><p id="categoryError" role="alert"></p><div class="dialog-actions"><button id="cancelCategory" type="button">Abbrechen</button><button class="primary" type="submit">Hinzufügen</button></div></form></dialog>
+<button id="listDock" class="list-dock" type="button" hidden></button><dialog id="historyDialog" aria-labelledby="historyTitle"><div class="history-heading"><h2 id="historyTitle">Verlauf</h2><button id="closeHistory" class="icon-button" type="button" aria-label="Verlauf schließen">×</button></div><div id="historyEntries"></div></dialog><script src="history.js"></script><script src="counting.js"></script><script src="app.js"></script></body></html>
+
+
+
+
+
+
+
